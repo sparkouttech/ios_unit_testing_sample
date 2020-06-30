@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: -
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,11 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet var collectionTextField: [UITextField]!
     @IBOutlet weak var signupButton: UIButton!
-    var viewModel: LoginViewModel?
+    
+    fileprivate var viewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = LoginViewModel()
         setUpBindings()
     }
     
@@ -31,11 +32,11 @@ class ViewController: UIViewController {
             txt.delegate = self
             txt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
         }
-        signupButton.alpha = (viewModel?.isSignInActive ?? false) ? 1 : 0.5
+        signupButton.alpha = (viewModel.isSignInActive) ? 1 : 0.5
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
-        viewModel?.signUpAction(vc: self)
+        viewModel.signUpAction(vc: self)
     }
     
 }
@@ -45,17 +46,17 @@ extension ViewController: UITextFieldDelegate {
         let text = textField.text
         switch textField {
         case firstNameTextField:
-            self.viewModel?.firstName = text ?? ""
+            self.viewModel.firstName = text ?? ""
         case lastNameTextField:
-            self.viewModel?.lastName = text ?? ""
+            self.viewModel.lastName = text ?? ""
         case emailTextField:
-            self.viewModel?.email = text ?? ""
+            self.viewModel.email = text ?? ""
         case passwordTextField:
-            self.viewModel?.password = text ?? ""
+            self.viewModel.password = text ?? ""
         case confirmPasswordTextField:
-            self.viewModel?.confirmPassword = text ?? ""
+            self.viewModel.confirmPassword = text ?? ""
         default: break
         }
-        signupButton.alpha = (viewModel?.isSignInActive ?? false) ? 1 : 0.5
+        signupButton.alpha = (viewModel.isSignInActive) ? 1 : 0.5
     }
 }

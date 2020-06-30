@@ -21,6 +21,8 @@ struct LoginViewModel {
         return checkEmptyFields()
     }
     
+    
+    //MARK: - Initialisation
     init() {
         firstName = ""
         lastName = ""
