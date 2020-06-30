@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,106 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnitTestExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="OOX-G4-beR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSI-7A-WYc">
+                                <rect key="frame" x="10" y="215.5" width="394" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G7T-Io-Pz4">
+                                <rect key="frame" x="30" y="235.5" width="354" height="435"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37p-Mc-LxU">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="23"/>
+                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVo-A2-DtI">
+                                        <rect key="frame" x="0.0" y="65" width="354" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="VTh-Ch-gHs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2W-Ud-JTD">
+                                        <rect key="frame" x="0.0" y="130" width="354" height="45"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-A0-pxR">
+                                        <rect key="frame" x="0.0" y="195" width="354" height="45"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpE-Ny-qdU">
+                                        <rect key="frame" x="0.0" y="260" width="354" height="45"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dlt-u5-JKw">
+                                        <rect key="frame" x="0.0" y="325" width="354" height="45"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-xW-gph">
+                                        <rect key="frame" x="0.0" y="390" width="354" height="45"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="17"/>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8G-Af-OaE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bSI-7A-WYc" firstAttribute="centerY" secondItem="G7T-Io-Pz4" secondAttribute="centerY" id="1AO-3d-i9Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OOX-G4-beR" secondAttribute="trailing" id="3xX-1o-mbW"/>
+                            <constraint firstItem="OOX-G4-beR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BfN-Y4-Je5"/>
+                            <constraint firstAttribute="bottom" secondItem="OOX-G4-beR" secondAttribute="bottom" id="Fn9-en-8Y1"/>
+                            <constraint firstItem="G7T-Io-Pz4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HkJ-6z-xA9"/>
+                            <constraint firstItem="G7T-Io-Pz4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iun-v0-4pn"/>
+                            <constraint firstItem="bSI-7A-WYc" firstAttribute="centerX" secondItem="G7T-Io-Pz4" secondAttribute="centerX" id="N5V-fy-FSW"/>
+                            <constraint firstItem="OOX-G4-beR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SEA-xa-Xch"/>
+                            <constraint firstItem="bSI-7A-WYc" firstAttribute="width" secondItem="G7T-Io-Pz4" secondAttribute="width" constant="40" id="c93-dr-SBN"/>
+                            <constraint firstItem="G7T-Io-Pz4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="o51-7U-PGC"/>
+                            <constraint firstItem="bSI-7A-WYc" firstAttribute="height" secondItem="G7T-Io-Pz4" secondAttribute="height" constant="40" id="qpm-Cm-PbE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G7T-Io-Pz4" secondAttribute="trailing" constant="30" id="u9l-Fm-IIJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="Dlt-u5-JKw" id="U9r-1T-zUa"/>
+                        <outlet property="emailTextField" destination="Qmo-A0-pxR" id="AFu-Ej-V3E"/>
+                        <outlet property="firstNameTextField" destination="wVo-A2-DtI" id="lI1-BY-G0m"/>
+                        <outlet property="lastNameTextField" destination="T2W-Ud-JTD" id="pfl-pE-bbW"/>
+                        <outlet property="passwordTextField" destination="IpE-Ny-qdU" id="vf6-ok-VoA"/>
+                        <outlet property="signupButton" destination="HYA-xW-gph" id="WqG-i5-bZ2"/>
+                        <outletCollection property="collectionTextField" destination="Dlt-u5-JKw" collectionClass="NSMutableArray" id="kux-Qr-jcH"/>
+                        <outletCollection property="collectionTextField" destination="IpE-Ny-qdU" collectionClass="NSMutableArray" id="dgf-tO-xqF"/>
+                        <outletCollection property="collectionTextField" destination="Qmo-A0-pxR" collectionClass="NSMutableArray" id="G38-6l-dxv"/>
+                        <outletCollection property="collectionTextField" destination="T2W-Ud-JTD" collectionClass="NSMutableArray" id="tfn-S8-4zb"/>
+                        <outletCollection property="collectionTextField" destination="wVo-A2-DtI" collectionClass="NSMutableArray" id="47y-sg-4cF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="1280" height="853"/>
+    </resources>
 </document>

@@ -14,6 +14,8 @@
 		785561A624AAF6A00065DB90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785561A524AAF6A00065DB90 /* Assets.xcassets */; };
 		785561A924AAF6A00065DB90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785561A724AAF6A00065DB90 /* LaunchScreen.storyboard */; };
 		785561B424AAF6A10065DB90 /* UnitTestExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785561B324AAF6A10065DB90 /* UnitTestExampleTests.swift */; };
+		785561BF24AAF7E20065DB90 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785561BE24AAF7E20065DB90 /* LoginViewModel.swift */; };
+		785561C224AB26480065DB90 /* UIAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785561C124AB26480065DB90 /* UIAlert+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		785561AF24AAF6A10065DB90 /* UnitTestExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785561B324AAF6A10065DB90 /* UnitTestExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestExampleTests.swift; sourceTree = "<group>"; };
 		785561B524AAF6A10065DB90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785561BE24AAF7E20065DB90 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		785561C124AB26480065DB90 /* UIAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 			children = (
 				7855619C24AAF69F0065DB90 /* AppDelegate.swift */,
 				7855619E24AAF69F0065DB90 /* SceneDelegate.swift */,
+				785561C124AB26480065DB90 /* UIAlert+Extension.swift */,
 				785561A024AAF69F0065DB90 /* ViewController.swift */,
+				785561BE24AAF7E20065DB90 /* LoginViewModel.swift */,
 				785561A224AAF69F0065DB90 /* Main.storyboard */,
 				785561A524AAF6A00065DB90 /* Assets.xcassets */,
 				785561A724AAF6A00065DB90 /* LaunchScreen.storyboard */,
@@ -200,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785561BF24AAF7E20065DB90 /* LoginViewModel.swift in Sources */,
 				785561A124AAF69F0065DB90 /* ViewController.swift in Sources */,
+				785561C224AB26480065DB90 /* UIAlert+Extension.swift in Sources */,
 				7855619D24AAF69F0065DB90 /* AppDelegate.swift in Sources */,
 				7855619F24AAF69F0065DB90 /* SceneDelegate.swift in Sources */,
 			);
