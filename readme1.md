@@ -3,7 +3,7 @@
 
 To get started, we are going to create a blank iOS project. You will want to have the include unit tests checkbox checked.
 
-![Image 1] (https://ibb.co/Mhd6bbD)
+![Image 1] (https://raw.githubusercontent.com/sparkouttech/ios_unit_testing_sample/master/unitest1.png)
 
 ##### If already have project, and want to add unit test
 
