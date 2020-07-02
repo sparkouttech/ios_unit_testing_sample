@@ -15,8 +15,8 @@ To get started, we are going to create a blank iOS project. You will want to hav
 
 ### Running Unit Test in XCode
 
-Now that you have the unit test target in your project, you can run the tests from the menu bar with Product > Test or just use the keyboard shortcut:⌘U.
+Now that you have the unit test target in your project, you can run the tests from the menu bar with Product > Test or just use the keyboard shortcut:[⌘U]
 
-When the tests finish, you should see green checkmarks in the Test Navigatorin the left pane (⌘6) indicating that the tests passed.
+When the tests finish, you should see green checkmarks in the [Test Navigator] in the left pane [(⌘6)] indicating that the tests passed.
 
 ![](https://raw.githubusercontent.com/sparkouttech/ios_unit_testing_sample/master/unitest3.png)
