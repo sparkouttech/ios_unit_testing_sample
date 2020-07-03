@@ -125,8 +125,8 @@ class UnitTestExampleTests: XCTestCase {
         XCTAssertTrue(loginModelTest.doPasswordsMatch())
     }
     
-    func testLoginModelFailureTestCase() {
-        loginModelTest = LoginViewModel(firstName: "first", lastName: "last", email: "test@dk.co", password: "test", confirmPassword: "tes")
-        XCTAssertTrue(loginModelTest.doPasswordsMatch())
-    }
+//    func testLoginModelFailureTestCase() {
+//        loginModelTest = LoginViewModel(firstName: "first", lastName: "last", email: "test@dk.co", password: "test", confirmPassword: "tes")
+//        XCTAssertTrue(loginModelTest.doPasswordsMatch())
+//    }
 }
