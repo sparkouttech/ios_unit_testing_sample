@@ -1,0 +1,12 @@
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Carthage
+    - Pods
+    - SwiftLint/Common/3rdPartyLib
+
+disabled_rules:
+- leading_whitespace
+- trailing_whitespace
+- vertical_whitespace

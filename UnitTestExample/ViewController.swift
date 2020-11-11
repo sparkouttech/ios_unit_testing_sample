@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     
@@ -26,17 +27,26 @@ class ViewController: UIViewController {
         setUpBindings()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+      //  Analytics.setScreenName("Login", screenClass: "ViewController")
+    }
+    
     fileprivate func setUpBindings() {
         // Do any additional setup after loading the view.
         for txt in self.collectionTextField {
             txt.delegate = self
             txt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
+            txt.layer.borderWidth = 1
+            txt.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: txt.frame.height))
+            txt.leftViewMode = .always
+
         }
         signupButton.alpha = (viewModel.isSignInActive) ? 1 : 0.5
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
-        viewModel.signUpAction(vc: self)
+      //  viewModel.signUpAction(vc: self)
+       
     }
     
 }
@@ -60,3 +70,34 @@ extension ViewController: UITextFieldDelegate {
         signupButton.alpha = (viewModel.isSignInActive) ? 1 : 0.5
     }
 }
+
+extension ViewController {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        // You need to change the border color here
+        for txt in self.collectionTextField {
+            txt.layer.borderColor = UIColor.appColor(.customBorderColor)?.cgColor
+        }
+    }
+}
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+struct ViewRepresentable: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController").view
+    }
+    
+    func updateUIView(_ uiView: UIView, context: Context) {
+        
+    }
+}
+
+@available(iOS 13.0, *)
+struct ViewController_preview: PreviewProvider {
+    static var previews: some View {
+        ViewRepresentable().edgesIgnoringSafeArea(.all)
+    }
+
+}
+#endif

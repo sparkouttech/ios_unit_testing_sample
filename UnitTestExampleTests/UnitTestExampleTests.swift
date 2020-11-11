@@ -26,7 +26,6 @@ class UnitTestExampleTests: XCTestCase {
     
     func testLoginViewModelStruct_canCreateNewInstance() {
         loginModelTest = LoginViewModel()
-        
         XCTAssertNotNil(loginModelTest)
     }
     
@@ -129,4 +128,5 @@ class UnitTestExampleTests: XCTestCase {
 //        loginModelTest = LoginViewModel(firstName: "first", lastName: "last", email: "test@dk.co", password: "test", confirmPassword: "tes")
 //        XCTAssertTrue(loginModelTest.doPasswordsMatch())
 //    }
+    
 }

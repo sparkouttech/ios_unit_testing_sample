@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import Firebase
+import LifetimeTracker
 
+@available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        #if DEBUG
+            LifetimeTracker.setup(onUpdate: LifetimeTrackerDashboardIntegration(visibility: .alwaysVisible, style: .circular).refreshUI)
+        #endif
         return true
     }
 
@@ -34,4 +41,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

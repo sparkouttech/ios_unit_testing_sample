@@ -22,7 +22,7 @@ struct LoginViewModel {
     }
     
     
-    //MARK: - Initialisation
+    // MARK: - Initialisation
     init() {
         firstName = ""
         lastName = ""
@@ -43,10 +43,9 @@ struct LoginViewModel {
 extension LoginViewModel {
     
     func checkEmptyFields() -> Bool {
-        if (firstName != "" && lastName != "" && email != "" && password != "" && confirmPassword != "") {
+        if firstName != "" && lastName != "" && email != "" && password != "" && confirmPassword != "" {
             return true
-        }
-        else {
+        } else {
             return false
         }
     }
@@ -62,7 +61,7 @@ extension LoginViewModel {
     func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
     
@@ -71,19 +70,19 @@ extension LoginViewModel {
             return "Please, enter a password"
         }
         
-        if (password.count < 6) {
+        if password.count < 6 {
             return "Password must not be shorter than 6 characters"
         }
         
-        if (!NSPredicate(format: "SELF MATCHES %@", ".*[A-Z]+.*").evaluate(with: password)) {
+        if !NSPredicate(format: "SELF MATCHES %@", ".*[A-Z]+.*").evaluate(with: password) {
             return "Password must contain at least one uppercase letter"
         }
         
-        if (!NSPredicate(format: "SELF MATCHES %@", ".*[a-z]+.*").evaluate(with: password)) {
+        if !NSPredicate(format: "SELF MATCHES %@", ".*[a-z]+.*").evaluate(with: password) {
             return "Password must contain at least one lowercase letter"
         }
         
-        if (!NSPredicate(format: "SELF MATCHES %@", ".*[0-9]+.*").evaluate(with: password)) {
+        if !NSPredicate(format: "SELF MATCHES %@", ".*[0-9]+.*").evaluate(with: password) {
             return "Password must contain at least one number"
         }
         
@@ -99,34 +98,27 @@ extension LoginViewModel {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Error",
                                               message: "Please fill all Fields")
-        }
-        else if self.isValidFirstName() == false {
+        } else if self.isValidFirstName() == false {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Error",
                                               message: "Please enter valid first name")
-        }
-        else if self.isValidLastName() == false {
+        } else if self.isValidLastName() == false {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Error",
                                               message: "Please enter valid last name")
-        }
-        else if self.isValidEmail() == false {
+        } else if self.isValidEmail() == false {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Error",
                                               message: "Please enter valid email")
-        }
-              
-        else if let passwordError = isValidPassword(), passwordError != "" {
+        } else if let passwordError = isValidPassword(), passwordError != "" {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Error",
                                               message: passwordError)
-        }
-        else if self.doPasswordsMatch() == false {
+        } else if self.doPasswordsMatch() == false {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Error",
                                               message: "Password mismatched")
-        }
-        else {
+        } else {
             UIAlertController.showSimpleAlert(vc,
                                               title: "Success",
                                               message: "Registered successfully")
